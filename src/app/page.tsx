@@ -1,11 +1,9 @@
 "use client";
+import * as wasm from "rust-cybotixx";
 import React from "react";
-import init, { greet } from "@/rust/pkg";
 
 const HomePage = () => {
-  init().then(() => {
-    greet("Web Assembly");
-  });
+  wasm.greet("Hello from Web Assembly");
 
   return <div>HomePage</div>;
 };
